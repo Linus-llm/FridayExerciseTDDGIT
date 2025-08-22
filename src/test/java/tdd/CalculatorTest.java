@@ -8,8 +8,13 @@ public class CalculatorTest {
     Calculator instance = new Calculator();
     @Test
     void additionTest(){
-        int result = instance.add(1,2);
-        assertEquals(3,result);
+        int result = instance.add("1","2","3");
+        assertEquals(6,result);
+    }
+    @Test
+    void arrayTotalSumTest(){
+        int result = instance.add(new int[]{1,2,3,4,5,6,7,8,9,10});
+        assertEquals(55,result);
     }
     @Test
     void subtractionTest(){
